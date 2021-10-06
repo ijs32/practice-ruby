@@ -26,10 +26,10 @@ class Store_item
   attr_reader :item_name, :color, :price
   attr_writer :item_name, :color, :price
 
-  def initialize(item_name, color, price)
-    @item_name = item_name
-    @color = color
-    @price = price
+  def initialize(input_options)
+    @item = input_options[:item]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
   def price_inflation
@@ -37,13 +37,13 @@ class Store_item
   end
 
   def print_info
-    puts "#{@item_name}, #{@color}, #{@price}"
+    puts "#{@item}, #{@color}, #{@price}"
     return
   end
 end
 
-item1 = Store_item.new("charger", "white", 29.99)
-item2 = Store_item.new("phone", "space grey", 699.99)
+item1 = Store_item.new({ item: "charger", color: "white", price: "$29.99" })
+item2 = Store_item.new({ item: "phone", color: "space grey", price: "$699.99" })
 
 item1.color = "green"
 item1.price_inflation
