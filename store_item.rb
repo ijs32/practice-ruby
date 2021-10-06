@@ -49,3 +49,27 @@ item1.color = "green"
 item1.price_inflation
 item1.print_info
 item2.print_info
+
+#experimenting with parameters
+def puts_variables(a, b = "hello")
+  puts a
+  puts b
+end
+
+puts_variables("world")
+
+def example_method(options)
+  puts options[:item1]
+  puts options["item2"]
+end
+
+example_method(item1: "ferrari", "item2" => "lamborghini")
+
+def example_method2(item1, item2, options)
+  p item1
+  p item2
+  p options[:hash_item1]
+  p options[:hash_item2]
+end
+
+example_method2("hello", "world", { hash_item1: "how", hash_item2: "are you?" })
