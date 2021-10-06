@@ -7,18 +7,18 @@
 
 #represent store items using array of hashes
 
-# store = [
-#   { item: "charger", color: "white", price: "$29.99" },
-#   { item: "phone", color: "space grey", price: "$699.99" },
-#   { :item => "watch", :color => "blue", :price => "$12,995" },
-# ]
+store = [
+  { item: "charger", color: "white", price: "$29.99" },
+  { item: "phone", color: "space grey", price: "$699.99" },
+  { :item => "watch", :color => "blue", :price => "$12,995" },
+]
 
-# p store[0]
-# puts "======================================"
-# p store[1]
-# puts "======================================"
-# p store[2]
-# puts "======================================"
+p store[0]
+puts "======================================"
+p store[1]
+puts "======================================"
+p store[2]
+puts "======================================"
 
 #represent store items using a class
 
