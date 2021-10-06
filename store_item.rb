@@ -23,21 +23,12 @@
 #represent store items using a class
 
 class Store_item
+  attr_reader :item_name, :color, :price
+  attr_writer :item_name, :color, :price
+
   def initialize(item_name, color, price)
     @item_name = item_name
     @color = color
-    @price = price
-  end
-
-  def item=(item)
-    @item_name = item
-  end
-
-  def color=(color)
-    @color = color
-  end
-
-  def price=(price)
     @price = price
   end
 
