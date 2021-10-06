@@ -36,6 +36,7 @@ end
 premium_item = Premium_items.new(item: "Gold Plated Lambo", color: "gold", price: 10000000, availability: "unavailable")
 premium_item.scream
 p premium_item.availability
+p premium_item.color
 
 item1 = Store_item.new({ item: "charger", color: "white", price: "$29.99" })
 item2 = Store_item.new({ item: "phone", color: "space grey", price: "$699.99" })
