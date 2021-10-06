@@ -19,6 +19,13 @@ class Store_item
 end
 
 class Premium_items < Store_item
+  attr_reader :availability
+
+  def initialize(input_options)
+    super
+    @availability = input_options[:availability]
+  end
+
   def scream
     5.times do
       puts @price
@@ -26,8 +33,9 @@ class Premium_items < Store_item
   end
 end
 
-premium_item = Premium_items.new(item: "Gold Plated Lambo", color: "gold", price: 10000000)
+premium_item = Premium_items.new(item: "Gold Plated Lambo", color: "gold", price: 10000000, availability: "unavailable")
 premium_item.scream
+p premium_item.availability
 
 item1 = Store_item.new({ item: "charger", color: "white", price: "$29.99" })
 item2 = Store_item.new({ item: "phone", color: "space grey", price: "$699.99" })
