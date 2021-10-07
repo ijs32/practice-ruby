@@ -1,5 +1,5 @@
-require "./item.rb"
-require "./premium_item.rb"
+require_relative "item"
+require_relative "premium_item"
 
 item1 = Store_item.new({ item: "charger", color: "white", price: "$29.99" })
 item2 = Store_item.new({ item: "phone", color: "space grey", price: "$699.99" })

@@ -1,4 +1,4 @@
-require "./item_module.rb"
+require_relative "item_module"
 
 class Store_item
   include Items
