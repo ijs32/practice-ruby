@@ -1,5 +1,7 @@
 class Vehicle
-  def initialize
+  attr_accessor :brake, :accelerate, :turn
+
+  def initialize(_)
     @speed = 23
     @direction = "north"
   end
@@ -18,10 +20,9 @@ class Vehicle
 end
 
 class Car < Vehicle
-  attr_reader :make, :model
+  attr_accessor :make, :model
 
-  def intialize(options)
-    super
+  def initialize(options)
     @make = options[:make]
     @model = options[:model]
   end
@@ -48,6 +49,10 @@ end
 car1 = Car.new(make: "Ford", model: "F150")
 car1.honk_horn
 p car1.make
+car1.make = "Tesla"
+car1.model = "cyberTruck"
+p car1.make
+p car1.model
 
 bike = Bike.new(type: "mountain", weight: 23)
 bike.ring_bell
